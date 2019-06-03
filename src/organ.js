@@ -15,15 +15,16 @@ export class Organ {
         }
     }
         
-    addInitialIntactOrgans() {
-        let finger = new Organ('finger', 5, 5, 10);
-        let liver = new Organ('liver', 30, 15, 2);
-        let kidney = new Organ('kidney', 50, 15, 2);
-        let appendix = new Organ('appendix', 5, 10, 1);
-        let heart = new Organ('heart', 100, 100, 1);
-        let eye = new Organ('eye', 20, 10, 2);
-        let lung = new Organ('lung', 45, 15, 4);
-        let organArray = [finger, liver, kidney, appendix, heart, eye, lung];
-        return organArray;
-    } 
+}
+       
+export class IntactOrgans {
+    constructor(){
+        this.finger = new Organ('finger', 5, 5, 10);
+        this.liver = new Organ('liver', 30, 15, 2);
+        this.kidney = new Organ('kidney', 50, 15, 2);
+        this.appendix = new Organ('appendix', 5, 10, 1);
+        this.heart = new Organ('heart', 100, 100, 1);
+        this.eye = new Organ('eye', 20, 10, 2);
+        this.lung = new Organ('lung', 45, 15, 4);
+    }
 }

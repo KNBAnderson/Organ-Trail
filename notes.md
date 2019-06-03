@@ -10,6 +10,9 @@
 - party speed
 - first aid amount
 
+methods:
+donor.removeOrgan - add to icechest
+
 ### Donor Object
 - organs [](intact, harvestable organs)
 - health 
