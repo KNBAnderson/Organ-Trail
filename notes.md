@@ -1,7 +1,7 @@
 # Organ Trail
 
 ### Party object
-- id
+- id 
 - donors []
 - iceChest[](inventory of harvested organs)
 - overall score
@@ -10,18 +10,21 @@
 - party speed
 - first aid amount
 
+<!-- ### ice chest -->
+
+
 methods:
 donor.removeOrgan - add to icechest
-
+<!-- 
 ### Donor Object
 - organs [](intact, harvestable organs)
 - health 
-- name
+- name -->
 
-### Organ Objext
+<!-- ### Organ Objext
 - name
 - int value ($value)
-- health value
+- health value -->
 
 ### Emergency Items
 - name
@@ -78,3 +81,8 @@ total distance
 'Colorado is submerged under water'
 'Utah is a tundra'
 Nevada is entirely owned by the something mob
+
+font-family: 'Bahiana', cursive;
+font-family: 'East Sea Dokdo', cursive;
+font-family: 'Press Start 2P', cursive;
+font-family: 'VT323', monospace;
