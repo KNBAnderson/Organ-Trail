@@ -1,6 +1,6 @@
 export class Party {
     constructor(players) {
-        this.players = players;
+        this.players = [];
         this.day = 0;
         this.speed = 100;
         this.score = 0;

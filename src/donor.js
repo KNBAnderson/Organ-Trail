@@ -1,5 +1,4 @@
-import { Organ, initOrgans } from './organ';
-import { IntactOrgans } from './IntactOrgans';
+import { Organ, IntactOrgans} from './organ';
 
 export class Donor {
     constructor(name) {
@@ -9,10 +8,10 @@ export class Donor {
     }
 
     canHarvest(organName){
-        if(organName == "lung" && this.organs.lung.count > 1 && this.organs['lung'].healthValue < this.health){
+        if(organName == "lung" && this.organs['lung'].count > 1 && this.organs['lung'].healthValue < this.health){
             return true;
         }
-        else if(this.organs.organName.healthValue < this.health) {
+        else if(this.organs[organName].healthValue < this.health && this.organs[organName].count > 0 && organName !== 'lung') {
                 return true;
         }
         else {
@@ -26,7 +25,21 @@ export class Donor {
 
     removeOrgan(organName){
         this.organs[organName].lowerOrganCount();
-        this.health -= this.organs.organName.healthValue;
-        return this.organs.organName;
+        this.health -= this.organs[organName].healthValue;
+        return this.organs[organName];
+    }
+
+    getAvailableOrgans() {
+        let propArray = Object.values(this.organs);
+        let availableOrgans = [];
+        propArray.forEach(organ => {
+            if (organ.count > 0) {
+                for (let i = 1; i <= organ.count; i++) {
+                    // organ.count = 1;
+                    availableOrgans.push(organ);
+                }
+            }
+        })
+        return availableOrgans;
     }
 }
