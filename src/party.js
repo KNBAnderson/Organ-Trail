@@ -44,6 +44,7 @@ export class Party {
       }   
     })
     let redbullSpeed = this.inventory.redbull * 5;
+    console.log(baseSpeed, boarganSpeed, blindSpeed, redbullSpeed);
     this.speed = baseSpeed + boarganSpeed + blindSpeed + redbullSpeed;
   }
 
