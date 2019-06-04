@@ -1,3 +1,9 @@
-#jsOutput {
-  color: red;
+
+form {
+  display: flex;
+  flex-direction: column;
 }
+
+/* #shop-head {
+  display: flex;
+} */
