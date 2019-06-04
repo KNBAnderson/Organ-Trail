@@ -19,8 +19,8 @@ pack = { ice : 0, bloodpack :0, dialysis : false, firstaid: 0; wallet:0}
 <!-- ### ice chest -->
 
 
-methods:
-donor.removeOrgan - add to icechest
+<!-- methods:
+donor.removeOrgan - add to icechest -->
 <!-- 
 ### Donor Object
 - organs [](intact, harvestable organs)
@@ -44,14 +44,14 @@ donor.removeOrgan - add to icechest
  - description
  - event? -->
 
- ### Event
+ <!-- ### Event
  - id
  - description
  - choices ['key', choice object]
 
  ## Choice
  - description
- - function (what happens when this is called)
+ - function (what happens when this is called) -->
 
 
 
