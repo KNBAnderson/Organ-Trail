@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import { Organ, IntactOrgans} from './../src/organ';
-import { Donor, Boargan } from './../src/donor';
+import { Donor, Boargan, getPremadeParty } from './../src/donor';
 
 describe('donor', () => {
   let donor;
@@ -55,4 +55,11 @@ describe('donor', () => {
       expect(newBoargan.organs['kidney'].count).toEqual(1);
     });
   });
+
+  describe('premade party array of donors', () => {
+    test('should create a party of four donors', () => {
+      let donors = getPremadeParty();
+      expect(donors.length).toEqual(4);
+    })
+  })
 });

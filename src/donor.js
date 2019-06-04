@@ -42,7 +42,17 @@ export class Donor {
     });
     return availableOrgans;
   }
+
 }
+
+
+export function getPremadeParty() {
+  let donor1 = new Donor('Little Jimmy');
+  let donor2 = new Donor('Twelve-Toe Moe');
+  let donor3 = new Donor('The Incredible Bat Girl');
+  let donor4 = new Donor('Jane Doe');
+  return [donor1, donor2, donor3, donor4];
+} 
 
 export class Boargan extends Donor {
   constructor(name){

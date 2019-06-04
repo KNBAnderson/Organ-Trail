@@ -11,9 +11,10 @@
 - overall score
 - moral score
 - item inventory
+pack = { ice : 0, bloodpack :0, dialysis : false, firstaid: 0; wallet:0}
 - party speed
-- first aid amount
-- wallet
+- distanceTraveled
+
 
 <!-- ### ice chest -->
 
@@ -31,20 +32,17 @@ donor.removeOrgan - add to icechest
 - int value ($value)
 - health value -->
 
-### Emergency Items
-- name
-- health benefit
 
 <!-- ### Boargan
 - name
 - organs[]
 - speed -->
 
-### Location
+<!-- ### Location
  - name
  - hasShop (bool)
  - description
- - event?
+ - event? -->
 
  ### Event
  - id
