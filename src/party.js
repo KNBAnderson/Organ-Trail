@@ -5,7 +5,6 @@ import { Organ } from './organ';
 export class Party {
   constructor() {
     this.donors = getPremadeParty();
-    this.day = 0;
     this.distanceTraveled = 0;
     this.speed = 0;
     this.score = 0;
@@ -51,10 +50,4 @@ export class Party {
   updateDistanceTraveled () {
     this.distanceTraveled += this.speed;
   }
-
-  // dayEnd() {
-  //     this.day++;
-  //     this.updateSpeed();
-  //     this.updateDistanceTraveled();
-  // }
 }

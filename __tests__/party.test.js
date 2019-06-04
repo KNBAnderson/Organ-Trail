@@ -15,7 +15,6 @@ describe('party', () => {
     test('should instantiate new party object', () => {
       expect(typeof testParty).toBe('object');
       expect(testParty.donors[2].name).toEqual('The Incredible Bat Girl');
-      expect(testParty.day).toEqual(0);
       expect(testParty.speed).toEqual(0);
       expect(testParty.distanceTraveled).toEqual(0);
       expect(testParty.score).toEqual(0);
