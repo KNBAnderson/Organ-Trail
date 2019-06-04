@@ -1,4 +1,8 @@
 # Organ Trail
+- party object
+- locations object
+- events object
+- shop objects
 
 ### Party object
 - id 
@@ -9,6 +13,7 @@
 - item inventory
 - party speed
 - first aid amount
+- wallet
 
 <!-- ### ice chest -->
 
@@ -30,10 +35,10 @@ donor.removeOrgan - add to icechest
 - name
 - health benefit
 
-### Boargan
+<!-- ### Boargan
 - name
 - organs[]
-- speed
+- speed -->
 
 ### Location
  - name

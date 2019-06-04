@@ -1,7 +1,7 @@
-import {greeting} from './functions';
+
 import $ from 'jquery';
-import './styles.css';
+import './css/styles.css';
 
 $(document).ready(function(){
-  $('#jsOutput').text(greeting());
+  $('#jsOutput').text("greetings");
 });
