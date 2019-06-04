@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { IceChest } from '../src/iceChest';
 import { exportAllDeclaration } from '@babel/types';
 
@@ -6,7 +7,7 @@ describe('iceChest', () => {
 
   beforeEach(() => {
     iceChest = new IceChest();
-  })
+  });
 
   describe('constructor' , () => {
     test('should create instance of IceChest', () => {
@@ -28,7 +29,7 @@ describe('iceChest', () => {
       iceChest.capacity = 1;
       iceChest.addOrgan(organ);
       expect(iceChest.addOrgan(new Object)).toBe(false);
-    })
+    });
 
     test('should increase iceChest.capacity', () => {
       iceChest.addCapacity();
@@ -39,12 +40,12 @@ describe('iceChest', () => {
       expect(iceChest.checkCapacity()).toEqual(0);
       iceChest.addCapacity();
       expect(iceChest.checkCapacity()).toEqual(5);
-    })
+    });
 
     test('should determine if max capacity possible has been reached', () => {
       expect(iceChest.isUnderCapacity()).toEqual(true);
       iceChest.capacity = 20;
       expect(iceChest.isUnderCapacity()).toEqual(false);
-    })
-  })
-})
+    });
+  });
+});

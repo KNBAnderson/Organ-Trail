@@ -7,7 +7,7 @@ export class IceChest {
 
   addOrgan(organObject) {
     if(this.organInv.length < this.capacity){
-      this.organInv.push(organObject)
+      this.organInv.push(organObject);
       return true;
     }
     else {
