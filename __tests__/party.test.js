@@ -8,13 +8,13 @@ describe('party', () => {
 
   beforeEach(()=>{
     testParty = new Party();
+    testParty.iceChest.capacity = 10;
   });
 
   describe('party constructor', () => {
     test('should instantiate new party object', () => {
       expect(typeof testParty).toBe('object');
       expect(testParty.donors[2].name).toEqual('The Incredible Bat Girl');
-      expect(testParty.day).toEqual(0);
       expect(testParty.speed).toEqual(0);
       expect(testParty.distanceTraveled).toEqual(0);
       expect(testParty.score).toEqual(0);
@@ -37,6 +37,21 @@ describe('party', () => {
       expect(testParty.harvestPartyOrgan(testParty.donors[1], 'appendix')).toBe(false);
     });
     
-    
+    test('should update party speed', () => {
+      testParty.boargans.push(new Donor('Swiney Todd'));
+      testParty.harvestPartyOrgan(testParty.donors[1], 'eye');
+      testParty.harvestPartyOrgan(testParty.donors[1], 'eye');
+      testParty.inventory.redbull = 4;
+      testParty.updateSpeed();
+      expect(testParty.donors[1].organs['eye'].count).toEqual(0);
+      expect(testParty.speed).toEqual(60);
+    })
+
+    test('should update distance travelled', () => {
+      testParty.distanceTraveled = 400;
+      testParty.speed = 75;
+      testParty.updateDistanceTraveled();
+      expect(testParty.distanceTraveled).toEqual(475);
+    })
   });
 })
