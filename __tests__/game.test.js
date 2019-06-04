@@ -1,4 +1,4 @@
-import { Game } from './../src/game';
+import { Game, randomize } from './../src/game';
 import { Organ } from '../src/organ';
 
 describe('game', () => {
@@ -40,7 +40,6 @@ describe('game', () => {
       testGame.party.inventory['ice'] = 5;
       testGame.dayEnd();
       expect(testGame.party.inventory['ice']).toEqual(4);
-      
       testGame.party.distanceTraveled = 3000;
       expect(testGame.dayEnd()).toEqual(true);
       testGame.party.distanceTraveled = 4;
@@ -48,6 +47,13 @@ describe('game', () => {
         donor.health = 0;
       });
       expect(testGame.dayEnd()).toBe(false);
+    })
+
+    test('should return random element from an array', () => {
+      let array = [7, 8, 9, 10];
+      expect(typeof randomize(array)).toBe('number');
+      expect(randomize(array)).toBeGreaterThan(7);
+      expect(randomize(array)).toBeLessThan(11);
     })
   })
 })
