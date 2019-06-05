@@ -49,4 +49,23 @@ export class Party {
   updateDistanceTraveled () {
     this.distanceTraveled += this.speed;
   }
+
+  checkIce() {
+    if(this.inventory['ice'] < 1 && this.iceChest.organInv.length > 1) {
+      this.iceChest.organInv.pop();
+      this.inventory.ice = 0;
+    } else {
+      this.inventory.ice--;
+    }
+  }
+
+  checkFirstAid() {
+    if (this.inventory['firstaid'] < 1) {
+      this.donors.forEach(donor => {
+        if (!donor.isDead()) {
+          donor.health -= 5;
+        }
+      })
+    }
+  }
 }
