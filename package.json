@@ -9,7 +9,7 @@
     "test": "jest --watchAll --coverage --verbose"
   },
   "keywords": [],
-  "author": "Dustin Herboldshimer",
+  "author": "Katlin Anderson and Dustin Herboldshimer",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.4.5",
@@ -29,5 +29,14 @@
   },
   "dependencies": {
     "jquery": "^3.4.1"
-  }
+  },
+  "main": "babel.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KNBAnderson/Organ-Trail.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KNBAnderson/Organ-Trail/issues"
+  },
+  "homepage": "https://github.com/KNBAnderson/Organ-Trail#readme"
 }
